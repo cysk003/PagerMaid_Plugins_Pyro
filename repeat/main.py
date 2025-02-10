@@ -7,7 +7,7 @@ from pagermaid.utils.bot_utils import log
 from pyrogram.enums import ChatType
 from pyromod.listen import Client
 
-# 用持久化存储回复对象
+# 持久化存储回复对象
 repeat_status_file = 'data/repeat_status.json'
 
 # 加载状态
@@ -54,6 +54,8 @@ async def repeat(context: Message):
 async def repeat_msg(context: Message, bot: Client):
     """ Event handler. """
     chat_id = context.chat.id
+    if not context.from_user:
+        return
     sender_id = context.from_user.id
     if repeat_status.get(f'{chat_id}_{sender_id}'):
         try:
