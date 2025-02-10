@@ -1139,6 +1139,16 @@
             "supported": true,
             "des_short": "speedtest_go 测速",
             "des": "测速。\n指令：,speedtest_go"
+        },
+        {
+            "name": "repeat",
+            "version": "1.0",
+            "section": "chat",
+            "maintainer": "zhxy-CN",
+            "size": "2.155 kb",
+            "supported": true,
+            "des_short": "plugin: repeat",
+            "des": "repeat 自动复读（无引用）一个人的消息"
         }
     ]
 }
